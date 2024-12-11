@@ -1,0 +1,548 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,500;1,500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    
+   
+}
+:root{
+    
+    --text-color:white;
+    --hover-color:rgb(21, 146, 136);
+    background-color:black;
+    --big-font:2.5rem;
+    --secon-bg-color:#292e33;
+    --norma-font:2rem;
+    --neon-box-shadow:0 0 .5rem aqua;
+    --h2-font:3rem;
+    --font-neon-text-shadow:0 0 10px rgba(18,247,255,0.3),
+    0 0 20px rgba(18,247,255,0.3),
+    0 0 30px rgba(18,247,255,0.3),
+    0 0 40px rgba(18,247,255,0.3),
+    0 0 70px rgba(18,247,255,0.3),
+    0 0 80px rgba(18,247,255,0.3),
+    0 0 100px rgba(18,247,255,0.3),
+    0 0 150px rgba(18,247,255,0.3);
+}
+
+
+body{
+
+    font-family:"poppins",sans-sarif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 10%;
+}
+.logo{
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+span{
+    color :var(--hover-color);
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+       color:var(--text-color);
+       font-weight: 500;
+       padding: 10px 20px;
+       color: white;
+}
+.navlist a:hover{
+    color:var(--hover-color);
+    text-shadow:0 0 10px rgba(18,247,255,0.6),
+    0 0 20px rgba(18,247,255,0.6),
+    0 0 30px rgba(18,247,255,0.6),
+    0 0 40px rgba(18,247,255,0.6),
+    0 0 70px rgba(18,247,255,0.6),
+    0 0 80px rgba(18,247,255,0.6),
+    0 0 100px rgba(18,247,255,0.6),
+    0 0 150px rgba(18,247,255,0.6);
+}
+
+#menu-icon{
+    font-size: 1.5rem;
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    background: var(--hover-color);
+    border-radius: 3px;
+    color: var(--secon-bg-color);
+    display: none;
+}
+
+section{
+    padding: 100px 10%;
+}
+.home{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-gap:4em
+}
+.info{
+    max-width: 600px;
+    color: gray;
+    line-height: 1.6;
+}
+.home-content h1{
+    font-size: var(--big-font);
+    font-weight: 700;
+}
+.info-box{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: 1rem 0 2rem;
+}
+.info-box h5{
+    font-weight: 600;
+    font-size: 1rem;
+}
+.info-box span{
+    font-size: 0.9rem;
+    color: gray;
+}
+.btn-box{
+     display: flex;
+     justify-content: space-between;
+     width: 320px;
+     height: 45px;
+
+} 
+.btn-box a.btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: var(--hover-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.6s;
+    box-shadow: var(--neon-box-shadow);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+a.btn:hover{
+    background-color: aqua;
+}
+a.btn::before{
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     background: var(--bg-color);
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     transition: 0.4s;
+
+}
+a.btn:hover::before{
+     width: 100%;
+}
+
+a.btn:nth-child(2):hover{
+    color: var(--bg-color);
+    background: var(--bg-color)
+}
+.social-icons{
+    margin: 3rem;
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    height: 40px;
+}
+.social-icons a{
+    display: inline-flex;
+    width: 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    transition: 0.6s;
+    box-shadow: 0 0 0.3rem;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.social-icons a i{
+     font-size: 1.5rem;
+}
+.social-icons a:hover{
+    color: var(--bg-color);
+}
+.social-icons a::before{
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 0;
+   height: 100%;
+   background: var(--hover-color);
+   transition: 0.6s;
+   z-index: -1;
+}
+.social-icons a:hover::before{
+     width: 100%;
+}
+.home-image{
+    position: relative;
+    
+}
+.img-box {
+    text-align: center;
+   
+}
+.img-box img{
+   max-width: 430px;
+    height: auto;
+   width: 100%; 
+   border-radius: 50%;
+  
+}
+.liquid-shape{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     top: 10%;
+     margin-top: -25%;
+    
+}
+
+/* About section */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--secon-bg-color);
+    grid-gap:2em;
+    background: black;
+   
+
+}
+.Capture{
+    border-radius: 50%;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.about.img-about{
+     text-align: center;
+     position: relative;
+     
+}
+.about.img-about img{
+    max-width: 400px;
+    height: auto;
+}
+.about-content{
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+   
+}
+.about-content{
+font-weight: 700px;
+
+font-size: var(--norma-font);
+
+}
+.about-content h3{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+
+}
+
+.containerr {
+    background-color: black;
+    align-items: flex-start;
+    width: 50%; 
+    background-color: #ddd;
+    
+   
+}
+#skills{
+    background-color: black;
+    margin-top: 200px;
+    
+}
+.main-text{
+    margin-bottom: 100px;
+   margin-left: 100px;
+   padding-top: 20px;
+   border-radius: 50px;
+  
+}
+.main-text p{
+   text-align: left;
+
+}
+.mys{
+    color: gold;
+    font-size: 40px;
+    font-weight: 600;
+  
+}
+.skills {
+    
+    text-align: left;
+    padding: 1px;
+    color: black;
+    text-align: center;
+
+}
+.skills h2 {
+    color: gold;
+    font-size: 50px;
+
+}
+.skills p{
+    margin-top: 20px;
+    color: gold;
+}
+.html {
+    width: 90%;
+    padding: 1px; 
+    background-color: aqua; 
+}
+
+.css {
+    width: 80%;
+    padding: 1px;
+    background-color: aqua;
+}
+
+.js {
+    width: 65%;
+    padding: 1px;
+    background-color: aqua; /* Red */
+}
+.React {
+    width: 90%;
+    padding: 1px;
+    background-color: aqua; /* Green */
+}
+
+.next {
+    width: 80%;
+    padding: 1px;
+    background-color: aqua; /* Blue */
+}
+
+ /* contact section */
+.contant{
+    background: var(--secon-bg-color);
+    width: 100%;
+}
+.contant form{
+    text-align: center;
+    max-width: 50rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+}
+.contant form input,
+.contant form textarea{
+    width: 100%;
+    
+    background: rgb(31, 5, 78);
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 5PX;
+    padding: .7rem;
+}
+.btn{
+    justify-content: center;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10%;
+}
+.contant form textarea{
+    resize: none;
+}
+
+footer{
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+   width: 100%;
+   background-color: gray;
+   
+}
+
+.btn{
+    color: white;
+    background: black;
+}
+
+
+.segment h2{
+      justify-content: center;
+      text-align: center;
+      text-shadow: 5px 5px 5px black, 10px 10px 25px gold, 0 0 5px rgb(167, 224, 9);
+    transition: all ;
+}
+
+ h2:hover{
+   
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 10px 20px aqua inset;
+    border-radius: 10px;
+    color: rgb(8, 8, 8);
+    text-shadow: 2px 1px;
+    background-color: orange;
+    text-decoration:  6px solid rgb(149, 224, 11) ;
+    transition: 3s;
+    transition: width ;
+}
+
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+ }
+ .menu{
+    
+     background-color: rgba(123, 36, 204, 0.678);
+     width: 430px;
+     height: 470px;
+     border: 4px solid black;
+     margin: 20px;
+     width: calc(25.33% - 20px);
+     box-shadow: -10PX -2PX 5PX -5PX rgb(5, 187, 219);
+ }
+ .menu-image{
+     text-align: center;
+     align-content: center;
+     background-color: aqua;
+     height: 250px;
+     background-size: cover;
+ 
+ }
+ .menu1{
+     background-image: url("data1.jpg");
+     border: 4px solid black;
+ 
+ }
+ .menu2{
+     background-image:url("UX.jpg");
+     border: 4px solid black;
+     padding-bottom: 15px;
+ }
+ .menu3{
+     background-image:url("Graphic.jpg") ;
+     border: 4px solid black;
+  
+ }
+ .menu4{
+     background-image:url("digi.jpg") ;
+     padding-bottom: 15px;
+ }
+ .menu5{
+     background-image:url("Robo.jpg") ;
+     padding-bottom: 31px;
+ }
+ .menu6{
+     background-image:url("data\ analistic.jpg") ;
+     padding-bottom: 30px;
+ }
+ 
+ .menu h2 {
+     padding: 5px;
+ }
+ .menu p { 
+   
+     padding: 5px;
+ }
+ .menu p:hover{
+    text-shadow: 5px 5px 5px black, 10px 10px 25px gold, 0 0 5px rgb(167, 224, 9);
+ }
+
+
+ .menu a{
+     background-color: black;
+     color: white;
+     padding: 10px 15px; 
+     display:inline-block;
+     text-align: center;
+     margin: 15px 60px;
+ }
+
+
+
+ /* for contact section */
+
+ input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #0ea1ce;
+  }
+  
+  .containerrr {
+    border-radius: 5px;
+    background-color: rgb(19, 17, 17);
+    padding: 20px;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  @media only screen and (width:768px) and (resolution: 163dpi) {
+
+  }
+  
+  /* ipad Mini Landscape */
+  @media only screen and (width:1024px) and (resolution: 163dpi) {
+  
+  }
